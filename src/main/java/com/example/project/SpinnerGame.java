@@ -9,9 +9,6 @@ public class SpinnerGame{
     */
     public int spin(int min, int max){
     /* to be implemented in part (a) */ 
-        int result;
-        result = (int) (Math.random()*(max-min)+1)+min;
-        return result;
     }
 
     /** Simulates one round of the game as described in part (b).
@@ -25,20 +22,5 @@ public class SpinnerGame{
         I will be checking your FRQ response to make sure you declared
         and initialized your variables and assigned them to a call from your spin() method
         */
-        int result = playerSpin1 - computerSpin1;
-        if(result == 0){
-            if(playerSpin1+playerSpin2> computerSpin1 + computerSpin2){
-                System.out.println("You win! 1 points");
-            }
-            else if (computerSpin1 + computerSpin2 > playerSpin1 + playerSpin2 ){
-                System.out.println("You lose. -1 points");
-            }else{
-                System.out.println("Tie. 0 points");
-            }
-        }else if(result > 0){
-            System.out.println("You win! " + result + " points");
-        }else{
-            System.out.println("You lose. " + result + " points");
-        } 
     }
 }
